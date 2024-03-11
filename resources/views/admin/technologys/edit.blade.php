@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('page-title', 'edit modello')
+@section('page-title', 'edit technologia')
 
 @section('main-content')
     <div class="row">
@@ -11,13 +11,13 @@
                         modifica Progetto
                     </h1>
 
-                    <form action="{{ route('admin.types.update',['type' => $type->slug])  }}" method="POST">
+                    <form action="{{ route('admin.technologys.technology',['technology' => $technology->slug])  }}" method="POST">
                         
                         @method('PUT')
 
                         @csrf
 
-                        <label for="title" class="form-label">Nome Modello</label>
+                        <label for="title" class="form-label">Nome Tecnlogia</label>
                         <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" placeholder="Inserisci il nome del nuovo modello"
                             maxlength="1024" value="{{$project->title, old('title') }}">
                         @error('thumb')

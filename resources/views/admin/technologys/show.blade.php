@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('page-title', $type->title)
+@section('page-title', $technology->title)
 
 @section('main-content')
     <div class="row">
@@ -8,13 +8,14 @@
             <div class="card">
                 <div class="card-body">
                     <h1 class="text-center text-primary">
-                        {{ $type->title }}
+                        {{ $technology->title }}
                     </h1>        
                 </div>
             </div>
         </div>
     </div>
 
+    {{--
     <div class="row">
         <div class="col">
             <div class="card">
@@ -37,4 +38,5 @@
             </div>
         </div>
     </div>
+    --}}
 @endsection
