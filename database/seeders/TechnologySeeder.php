@@ -2,13 +2,13 @@
 
 namespace Database\Seeders;
 
-use App\Models\Technology;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 //Models
-use App\Models\Type;
+use App\Models\Technology;
 
+//Helpers
 use Illuminate\Support\Facades\Schema;
 
 class TechnologySeeder extends Seeder
@@ -38,7 +38,7 @@ class TechnologySeeder extends Seeder
         ];
 
         foreach ($allTechnology as $singleTechnology) {
-            $technology = Type::create([
+            $technology = Technology::create([
                 'title' => $singleTechnology,
                 'slug' => str() -> slug($singleTechnology),
             ]);

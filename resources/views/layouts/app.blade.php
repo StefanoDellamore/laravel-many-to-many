@@ -30,7 +30,7 @@
                                 <a class="nav-link" href="{{ route('admin.types.index') }}"> Tutti i Modelli</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('admin.technologys.index') }}"> Tutti i Modelli</a>
+                                <a class="nav-link" href="{{ route('admin.technologys.index') }}"> Tutti le Tecnologie</a>
                             </li>
                 
                         </ul>
