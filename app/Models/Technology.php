@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Technology extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'title',
+        'slug',
+        'content',
+        'category_id',
+        'status',
+    ];
+
 }

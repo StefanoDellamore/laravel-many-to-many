@@ -48,7 +48,7 @@ class TechnologyController extends Controller
             'slug' => $slug,
         ]);
 
-        return redirect() -> route('admin.technologys.show', ['technology'=>$technology->id ]);
+        return redirect()->route('admin.technologys.show', ['technology'=>$technology->id ]);
     }
 
     /**
@@ -83,7 +83,7 @@ class TechnologyController extends Controller
             'slug' => $slug,
         ]);
 
-        return redirect() -> route('admin.technologys.show', ['technology'=>$technology->id]);
+        return redirect()->route('admin.technologys.show', ['technology'=>$technology->id]);
     }
 
     /**

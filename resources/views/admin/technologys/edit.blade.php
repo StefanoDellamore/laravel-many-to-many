@@ -28,7 +28,7 @@
 
                         <div>
                             <button type="submit" class="btn btn-success w-100">
-                                + Aggiorna
+                                <a href="{{ route('admin.technologys.show') }}"></a>+ Aggiorna
                             </button>
                         </div>
                     </form>
