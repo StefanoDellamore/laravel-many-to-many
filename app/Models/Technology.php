@@ -12,9 +12,11 @@ class Technology extends Model
     protected $fillable = [
         'title',
         'slug',
-        'content',
-        'category_id',
-        'status',
     ];
+
+    public function projects()
+    {
+        return $this->belongsToMany(Project::class);
+    }
 
 }

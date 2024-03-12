@@ -29,9 +29,12 @@
                                     <a href="{{ route('types.show', ['type'=>$project->type->slug]) }}">
                                         {{ $project->type->title }}
                                     </a>
-                                </div>
-                                
+                                </div>                                
                             @endif
+
+                            <div class="mb-3">
+                                <span class="badge rounded-pill text-bg-primary">tag1</span>
+                            </div>
 
                             <div class="edit-buttons-container d-flex justify-content-between">
 
