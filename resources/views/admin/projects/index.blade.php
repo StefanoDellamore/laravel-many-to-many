@@ -24,15 +24,31 @@
                                 {{ $project->content }}
                             </p>
 
-                            @if ($project->type != null)
-                                <div class="btn btn-light mb-3">
-                                    <a href="{{ route('types.show', ['type'=>$project->type->slug]) }}">
-                                        {{ $project->type->title }}
-                                    </a>
+                            <div class="d-flex flex-column">
+                                <div>
+                                    @if ($project->type != null)
+                                    <div class="btn btn-light mb-3">
+                                        <a href="{{ route('types.show', ['type'=>$project->type->slug]) }}">
+                                            {{ $project->type->title }}
+                                        </a>
+                                    </div>                                    
+                                    @endif
                                 </div>
-                                
-                            @endif
 
+                                <div>
+                                    @forelse ($project->tags as $tag)                                
+                                    <span class="badge rounded-pill text-bg-primary mb-3">
+                                        {{ $tag->title }}
+                                    </span>
+                                    @empty 
+                                    <span class="badge rounded-pill text-bg-primary mb-3">
+                                        -
+                                    </span>
+                                    @endif
+                                </div>
+                             
+                            </div>
+                            
                             <div class="edit-buttons-container d-flex justify-content-between">
 
                                 <a href="{{ route('admin.projects.show', ['project' => $project->slug]) }}" class="btn btn-primary">
