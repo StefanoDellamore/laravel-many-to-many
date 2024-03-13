@@ -91,7 +91,7 @@ class TypeController extends Controller
     public function destroy(string $slug)
     {
         $type = Type::where('slug', $slug)->firstOrFail();
-        $type -> delete();
+        $type->delete();
         return redirect()->route('admin.types.index');
     }
 }

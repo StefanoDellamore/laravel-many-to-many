@@ -30,9 +30,8 @@
                                 <a class="nav-link" href="{{ route('admin.types.index') }}"> Tutti i Modelli</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('admin.technologys.index') }}"> Tutti le Tecnologie</a>
+                                <a class="nav-link" href="{{ route('admin.tags.index') }}"> Tutti i Tag</a>
                             </li>
-                
                         </ul>
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf

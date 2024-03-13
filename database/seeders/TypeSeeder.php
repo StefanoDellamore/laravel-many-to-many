@@ -7,7 +7,6 @@ use Illuminate\Database\Seeder;
 
 //Models
 use App\Models\Type;
-
 use Illuminate\Support\Facades\Schema;
 
 class TypeSeeder extends Seeder

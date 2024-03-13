@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('page-title', 'Creazione tecnologia')
+@section('page-title', 'Creazione tag')
 
 @section('main-content')
     <div class="row">
@@ -11,10 +11,10 @@
                        Nuovo Modello
                     </h1>
 
-                    <form action="{{ route('admin.technologys.store') }}" method="POST">
+                    <form action="{{ route('admin.tags.store') }}" method="POST">
                         @csrf
                         
-                        <label for="title" class="form-label">Nome Tecnologia</label>
+                        <label for="title" class="form-label">Nome del Tag</label>
                         <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" placeholder="Inserisci il nome del nuovo modello"
                             maxlength="1024" value="{{ old('title') }}">
                         @error('thumb')

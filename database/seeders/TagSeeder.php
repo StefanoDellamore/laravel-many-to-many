@@ -6,12 +6,11 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 //Models
-use App\Models\Technology;
+use App\Models\Tag;
 
-//Helpers
 use Illuminate\Support\Facades\Schema;
 
-class TechnologySeeder extends Seeder
+class TagSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -19,28 +18,23 @@ class TechnologySeeder extends Seeder
     public function run(): void
     {
         Schema::disableForeignKeyConstraints();
-        Technology::truncate();
+        Tag::truncate();
         Schema::enableForeignKeyConstraints();
 
-        $allTechnology = [
-            'News',
-            'Update',
-            'Release',
-            'Technology',
+        $allTag = [
             'Web',
             'Software',
             'Hardware',
             'Blockchain',
-            'AI',
+            'Ai',
             'Machine Learning',
-            'ChatGPT',
-
+            'ChatGpt',
         ];
 
-        foreach ($allTechnology as $singleTechnology) {
-            $technology = Technology::create([
-                'title' => $singleTechnology,
-                'slug' => str() -> slug($singleTechnology),
+        foreach ($allTag as $singleTag) {
+            $tag = Tag::create([
+                'title' => $singleTag,
+                'slug' => str() -> slug($singleTag),
             ]);
         }
     }

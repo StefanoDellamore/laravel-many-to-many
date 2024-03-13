@@ -12,7 +12,6 @@ use App\Http\Requests\UpdateProjectRequest;
 //Models
 use App\Models\Project;
 use App\Models\Type;
-use App\Models\Technology;
 
 //Helpers
 use Illuminate\Support\Str;
@@ -25,8 +24,7 @@ class ProjectController extends Controller
     public function index()
     {
         $project = Project::all();
-        $types = Type::all();
-        return view('admin.projects.index', compact('project', 'types'));
+        return view('admin.projects.index', compact('project'));
     }
 
     /**
@@ -35,8 +33,7 @@ class ProjectController extends Controller
     public function create()
     {
         $types = Type::all();
-        $technology = Technology::all();
-        return view('admin.projects.create', compact('types', 'technologys'));
+        return view('admin.projects.create', compact('types'));
     }
 
     /**
@@ -68,10 +65,8 @@ class ProjectController extends Controller
     public function edit(string $slug)
     {
         $project = Project::where('slug', $slug)->firstOrFail();
-        $type = Type::all();
-        $technology = Technology::all();
 
-        return view('admin.projects.edit', compact('project', 'type', 'technologys'));
+        return view('admin.projects.edit', compact('project'));
     }
 
     /**

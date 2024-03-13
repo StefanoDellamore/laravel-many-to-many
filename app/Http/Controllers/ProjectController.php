@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 //Models
 use App\Models\Project;
-use App\Models\Type;
 
 use Illuminate\Http\Request;
 
@@ -19,9 +18,8 @@ class ProjectController extends Controller
     public function index()
     {
         $projects = Project::all();
-        $types = Type::all();
         
-        return view("projects.index", compact("projects", "types"));
+        return view("projects.index", compact("projects"));
     }
 
 

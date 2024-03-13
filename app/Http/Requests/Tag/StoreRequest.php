@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\Technology;
+namespace App\Http\Requests\Tag;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -24,14 +24,16 @@ class StoreRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
-            'title'=>'required|string|max:255',
+        return [            
+            'title' => 'required|max:255',
         ];
     }
+
     public function messages(): array
     {
-        return[
-            //
-        ];  
+        return [
+            //'title.required' => 'Inserisci un Titolo per il tuo Progetto...',
+            //'content.required'=> 'Inserisci una descrizione per il tuo Progetto...',
+        ];
     }
 }

@@ -3,8 +3,6 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-
-use App\Models\Technology;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -18,7 +16,7 @@ class DatabaseSeeder extends Seeder
             TypeSeeder::class,
             ProjectSeeder::class,
             UserSeeder::class,
-            TechnologySeeder::class,
+            TagSeeder::class,
         ]);
     }
 }

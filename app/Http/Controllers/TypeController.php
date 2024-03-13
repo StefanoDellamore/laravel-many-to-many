@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 //models
-use App\Models\Project;
+
 use App\Models\Type;
 
 class TypeController extends Controller
@@ -49,12 +49,9 @@ class TypeController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $slug)
+    public function show(Type $type)
     {
-        $type = Type::where('slug' , $slug)->firstOrFail();
-        $projects = Project::where('type_id', $type->id)->get();
-
-        return view('types.show', compact('type', 'projects'));
+        return view('admin.types.show', compact('type'));
     }
 
     /**
