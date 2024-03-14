@@ -32,6 +32,7 @@ class TagController extends Controller
      */
     public function create()
     {
+        $tags = Tag::all();
         return view('admin.tag.create');
     }
 
@@ -56,8 +57,8 @@ class TagController extends Controller
      */
     public function show(string $slug)
     {
-        $tag = Tag::where('slug', $slug)->firstOrFail();
-        return view('admin.tags.show', compact('tag'));
+        $tags = Tag::where('slug', $slug)->firstOrFail();
+        return view('admin.tag.show', compact('tags'));
     }
 
     /**
