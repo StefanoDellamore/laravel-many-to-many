@@ -36,12 +36,13 @@
                                 </div>
 
                                 <div>
-                                    @forelse ($project->tags as $tag)                                
-                                        <a href="{{ route('admin.tags.show', ['tag' => $tag->id]) }}" class="badge rounded-pill text-bg-primary mb-3">
-                                            {{ $tag->title }}
-                                        </a>
+                                    @forelse ($project->tags as $tag)
+                                    <a href="{{ route('admin.tags.show', ['tag' => $tag->slug]) }}" class="badge rounded-pill text-bg-info mb-3">
+                                        {{ $tag->title }}
+                                    </a>                               
+                                        
                                     @empty 
-                                        <span class="badge rounded-pill text-bg-primary mb-3">
+                                        <span class="badge rounded-pill text-bg-info mb-3">
                                             -
                                         </span>
                                     @endif

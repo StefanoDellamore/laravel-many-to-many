@@ -49,6 +49,8 @@ class TagController extends Controller
             'slug' => $slug,
         ]);
 
+        $tag = Tag::create($tagData);
+
         return redirect() -> route('admin.tags.show', ['tag'=>$tag->id ]);
     }
 
